@@ -23,12 +23,14 @@ const Index = () => {
       <h1 className="text-4xl font-bold mb-8">Multilingual Greeter</h1>
       
       <div className="bg-white p-8 rounded-lg shadow-md text-center">
-        <p className="text-2xl mb-4">{currentGreeting.greeting}</p>
-        <p className="text-gray-600 mb-6">This is how you say "Hello" in {currentGreeting.language}</p>
-        <Button onClick={changeGreeting}>
-          Say "Hello" in another language
-        </Button>
+        <p className="text-2xl mb-2">{currentGreeting.greeting}</p>
+        <p className="text-gray-500 mb-4">({currentGreeting.language})</p>
+        <Button onClick={changeGreeting}>Say "Hello" in another language</Button>
       </div>
+
+      <footer className="mt-8 text-gray-500">
+        <p>Click the button to cycle through greetings in different languages.</p>
+      </footer>
     </div>
   );
 };
